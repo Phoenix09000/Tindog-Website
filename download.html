@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Include Firebase JavaScript library -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
+
+<!-- Initialize Firebase -->
+<script>
+  var firebaseConfig = {
+    // Add your Firebase configuration here 
+        apiKey: "AIzaSyDx3CR_zev1GFinGK0YIPQ-eR1v3itqR6M",
+        authDomain: "fir-fileupload-12a.firebaseapp.com",
+        projectId: "fir-fileupload-12a",
+        storageBucket: "fir-fileupload-12a.appspot.com",
+        messagingSenderId: "893506990723",
+        appId: "1:893506990723:web:02067f2789b0ed1faba1b6"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<button id="download-button">Download File</button>
+
+<script>
+  document.getElementById("download-button").addEventListener("click", function() {
+    var storageRef = firebase.storage().ref();
+    var fileRef = storageRef.child("images");
+    
+    fileRef.getDownloadURL().then(function(url) {
+      var xhr = new XMLHttpRequest();
+      xhr.responseType = "blob";
+      xhr.onload = function(event) {
+        var blob = xhr.response;
+        var a = document.createElement("a");
+        a.href = window.URL.createObjectURL(blob);
+        a.download = "1675371160691-test.jpg";
+        a.click();
+      };
+      xhr.open("GET", url);
+      xhr.send();
+    });
+  });
+</script>
+
+</body>
+</html>

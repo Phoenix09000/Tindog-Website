@@ -1,0 +1,163 @@
+html/* Dont remove, this prevents a white margin from appearing to the right*/
+{
+    overflow-x: hidden; 
+}
+b, body, h2{
+    font-family: "Montserrat";
+}
+b{
+    font-size: 3rem;
+    font-weight: 400;
+}
+body{
+    font-weight: 400;
+    border-right: 0;
+}
+h2{
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+h3{ 
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+p{
+    font-weight: 600;
+    color: #8f8f8f;
+}
+/* Classes */
+
+.row1{
+    /* color: white; */
+    padding-top: 50px;
+}
+.title-img{
+    position: absolute;
+    transform: rotate(25deg);
+    width: 300px;
+    right: 23%;
+}
+.container-fluid{
+    padding: 3% 15% 7%;
+}
+.toggl-icon{
+    margin: 0 1rem;
+}
+#title{
+    background-color: #ff4c68;
+}
+/* FEATURES */
+#features{
+    position: relative;
+    background-color: white;
+    padding: 100px 0;
+    align-items: center;
+    vertical-align: auto;
+    text-align: center;
+    z-index: 1;
+}
+.features-item{
+    color: black;
+}
+.features-icon:hover{
+    color: #ff4c68;
+    font-size: 50px;
+    padding: 0 0 15px;
+}.features-icon{
+    color: #ef8172;
+    font-size: 50px;
+    padding: 0 0 15px;
+}
+/* Navigation Bar */
+.download-btn{
+    margin: 5% 3% 5% 0;
+}
+.navbar{
+    padding: 0 0 1.5rem;
+}
+.navbar-brand{
+    font-family: "Ubuntu";
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.nav-item{
+    padding: 0 18px;
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+/* Testimonial section */
+
+#testimonials{
+    text-align: center;
+    background-color: #ef8172;
+    color: white;
+}
+.testimonial-img{
+     width: 10%;
+     border-radius: 100%;
+     margin: 20px;
+}
+.carousel-item{
+    padding: 7% 15%;
+}
+#press{
+    background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 3%;
+}
+.press-logo{
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+/* Pricing */
+.row-2{
+    align-items: center;
+}
+#pricing{
+    padding: 100px;
+    text-align: center;
+}
+.pricing-column{
+    padding: 0;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 5px;
+    margin:0 auto 57px;
+}
+
+@media (max-width: 1028px) {
+    #title{
+        text-align: center;
+    }
+    .title-img{
+        position: static;
+        transform: rotate(0);
+    }
+}
+
+/*Call to Action */
+#cta{
+    background-color: #ff4c68;
+    color: white;
+    text-align: center;
+    padding: 100px 200px;
+}
+
+/* Footer Part */
+#footer{
+    height: 200px;
+    padding-top: 60px;
+}
+#footer i{
+    margin:20px 10px;
+}
+#footer p{
+    text-align: center;
+    margin-bottom: auto;
+}
+.footer-brands{
+    text-align: center;
+    margin-top: auto;
+}
